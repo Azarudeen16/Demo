@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reg_Demo</title>
+	<script type="text/javascript">
+		function validation()
+		 {
+			var x=document.form["myform"]["uname"].value;
+			var y=document.form["myform"]["pass"].value;
+			if (x=="" && y=="") 
+			{
+				alert("Username & password must be filled out");
+				return false;
+
+
+			}
+			else if(x=="")
+			{
+				alert("Username must be filled out");
+			}
+			else if(y=="")
+			{
+				alert("password must be filled");
+				return false;
+			}
+
+
+
+
+		}
+	</script>
+	
+</head>
+<body>
+	<form name="myform" action="submit.htm" onsubmit="return validation()" method="get">
+		UserName : <input type="text" name="uname"><br>
+		Password:<input type="Password" name="pass"><br>
+		<input type="submit" name="submit" value="submit">
+		<input type="button" name="button" value="click me!" onclick="validation()">
+		
+	</form>
+
+</body>
+</html>
